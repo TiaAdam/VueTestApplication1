@@ -13,15 +13,16 @@ import axios from 'axios'
 export default {
  name: 'search',
  data () {
- return {
-  query: '',
-}
+  return {
+   query: '',
+   results: ''
+  }
  },
  methods: {
   getResult(query) {
-  axios.get('https://api.themoviedb.org/3/movie/550?api_key=556b76195b45a0a80dab2c28f97a97e0 query=' + query).then(response => { this.results = response.data.result })
-   console.log(query) 
-  }
+   axios.get('https://api.themoviedb.org/3/search/movie?api_key=556b76195b45a0a80dab2c28f97a97e0&query=' + query).then(response => { this.results = response.data.results })
+     console.log(this.results)
+   }
  }
 }
 </script>

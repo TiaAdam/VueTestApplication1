@@ -1,7 +1,7 @@
 <template>
- <div id='app'>
-  <Search/>
- </div>
+    <div id='app'>
+        <Search/>
+    </div>
 </template>
 <script>
 import Search from './components/Search'
